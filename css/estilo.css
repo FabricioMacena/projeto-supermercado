@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: borde-box;
+    color: #f6f6f6;
+    user-select: none;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+}
+
+header{
+    width: 100%;
+}
+
+#inicio{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #102487d2;
+}
+
+#header-center{
+    display: flex;
+    height: 400px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 10px 0;
+    background-image: url(../imgs/corredor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titulo{
+    font-size: 5em;
+    cursor: pointer;
+    color: #e8f3ee;
+    text-shadow: 0 0 7px #102487d2;
+}
+
+#header-center input{
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0 20px 20px 0;
+    font-size: 14pt;
+    background-color: #DEEFE7;
+    color: #002333;
+}
+
+#header-center input:hover{
+    border: 2px solid #002333;
+}
+
+#header-center input:active{
+    border: 2px solid #000;
+}
+
+.banner{
+    width: 250px;
+    margin-left: 20px;
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 6px #121212);
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    background-color: #102487d2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#menu a{
+    padding: 5px;
+}
+
+#menu a:hover{
+    color: rgb(168, 163, 163);
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.produto{
+    width: 200px;
+    border: #ccc solid 1px;
+    margin: 35px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #DEEFE7;
+}
+
+
+.produto figcaption, .produto strong{
+    color: #000;
+}
+
+.produto:hover{
+    border: 1px solid #002333;
+    box-shadow: 0 0 5px #002333;
+}
+
+.produto img{
+    width: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-bottom: 2px solid #ccc;
+}
+
+.title{
+    padding: 50px 0 20px 0;
+    text-align: center;
+    font-size: 18pt;
+}
+
+.title h2{
+    color: #201d1d;
+}
+
+hr{
+    width: 250px;
+    height: 3px;
+    margin: auto;
+    background-color: #102487d2;
+    border: 0;
+}
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #102487d2;
+
+}
+
+#social{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+div i{
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+#social i{
+    font-size: 18pt;
+}
+
+#contato{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: 50px;
+}
+
+#div_form{
+    background-color: #fff;
+}
+
+#contato input::placeholder, #contato textarea::placeholder, #header-center input::placeholder{
+    color: #102487d2;
+}
+
+#contato input, #contato textarea{
+    color: #102487d2;
+    width: 100%;
+    height: 50px;
+    border: #ccc 2px solid;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 12pt;
+}
+
+#contato input:hover, #contato textarea:hover{
+    border: 2px solid #101010;
+    box-shadow: 0 0 1px #000;
+
+}
+
+#contato input:active, #contato textarea:active{
+    border: 2px solid #000;
+}
+
+#rodape{
+    padding: 10px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 1290px){
+    #header-center input{
+        margin: 0 auto;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 970px){
+    #header-center{
+        flex-direction: column;
+    }
+    
+    .banner{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 770px){
+    #menu{
+        height: 100px;
+    }
+
+    #menu a{
+        margin-right: 10px;
+    }
+
+    #menu a, #inicio{
+        font-size: 14px;
+    }
+
+    .title{
+        padding-top: 100px;
+        font-size: 11pt;
+    }
+
+    hr{
+        height: 2px;
+    }
+}
+
+@media screen and (max-width: 615px){
+    #header-center input{
+        display: none;
+    }
+
+    #header-center{
+        align-items: center;
+        flex-direction: row;
+        height: 200px;
+    }
+
+    .banner{
+        width: 120px;
+    }
+
+    #titulo{
+        font-size: 2em;
+    }
+
+    .produto{
+        width: 100px;
+        font-size: 10pt;
+    }
+
+    .produto img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .title{
+        font-size: 10pt;
+    }
+
+    hr{
+        width: 100px;
+    }
+
+    #contato input, #contato textarea{
+        font-size: 10pt;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .banner{
+        width: 90px;
+    }
+
+    #menu a, #inicio{
+        font-size: 12px;
+    }
+
+    .title{
+        padding-top: 65px;
+    }
+
+    #menu{
+        height: 60px;
+    }
+
+    #header-center{
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    #titulo{
+        font-size: 1.7em;
+    }
+
+    #menu{
+        height: 120px;
+    }
+
+    .title{
+        padding-top: 120px;
+    }
+
+    .produto{
+        width: 70px;
+        font-size: 8pt;
+    }
+
+    .produto img{
+        width: 70px;
+        height: 70px;
+    }
+}
